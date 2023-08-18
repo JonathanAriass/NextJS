@@ -7,6 +7,11 @@ NextJS has two forms of pre-rendering:
 Is recommended to use Static Generation over Server-side Rendering for performance reasons. Statically generated pages can be cached by [CDN (Content Delivery Network)](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) wit no extra configuration to boost performance.
 
 <details>
+	<summary><h1 style="display: inline-block">Context</h1></summary>
+
+
+</details>
+<details>
 	<summary><h1 style="display: inline-block">Link</h1></summary>
 	
 Link is a React component that extends the HTML `\<a\>\` element to provide prefetching and client-side navigation between routes. It is the primary way to navigate between routes in NextJS.
@@ -36,7 +41,7 @@ When to use `getStaticProps`:
 - The data comes from a headless [CMS (Content Management Service)](https://kinsta.com/knowledgebase/content-management-system/)
 - The data must be pre-rendered and be very fast (html and json generation)
 - The data can be publicly cached (can be bypassed with Middleware)
-</details>
+
 <details>
 	<summary><h1 style="display: inline-block">revalidate</h1></summary>
 	
@@ -82,4 +87,5 @@ export async function getServerSideProps(context) {
 }
 ```
 The `notFound` boolean allows the page to return a 404 status.
+</details>
 </details>

@@ -55,7 +55,7 @@ The code above will call the `getStaticProps` function every 10 second ahead of 
 
 
 <details>
-	<summary><h1 style="display: inline-block">Want to ruin the surprise?</h1></summary>
+	<summary><h1 style="display: inline-block">notFound</h1></summary>
 	
 ```javascript 
 export async function getServerSideProps(context) {
@@ -75,5 +75,5 @@ export async function getServerSideProps(context) {
 	}
 }
 ```
-
-</details
+The `notFound` boolean allows the page to return a 404 status.
+</details>

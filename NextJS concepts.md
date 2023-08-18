@@ -32,6 +32,9 @@ When to use `getStaticProps`:
 - The data must be pre-rendered and be very fast (html and json generation)
 - The data can be publicly cached (can be bypassed with Middleware)
 
+<details>
+	<summary><h1 style="display: inline-block">revalidate</h1></summary>
+	
 A very interesting property of `getStaticProps` is the property `revalidate` which allows us to re-render the data and call this function again when the time entered as value has passed and we refresh the page ([ISR which stands for Incremental Static Regeneration](https://nextjs.org/docs/pages/building-your-application/rendering/incremental-static-regeneration)). An example of this is:
 ```js
 export function async getStaticProps() {
@@ -51,9 +54,7 @@ export default function Page({ repo }) {
 
 ```
 The code above will call the `getStaticProps` function every 10 second ahead of the last call on this function.
-
-
-
+</details>
 <details>
 	<summary><h1 style="display: inline-block">notFound</h1></summary>
 	

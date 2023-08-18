@@ -55,26 +55,25 @@ The code above will call the `getStaticProps` function every 10 second ahead of 
 
 
 <details>
-	<h1 style="display: inline-block"><summary>Want to ruin the surprise?</summary></h1>
+	<summary><h1 style="display: inline-block">Want to ruin the surprise?</h1></summary>
 	
 ```javascript 
-	export async function getServerSideProps(context) {
-		const res = await fetch('https://api.github.com/repos/vercerl/next.js')
-		const data = await res.json()
-	
-		if (!data) {
-			return {
-				notFound: true
-			}
-		}
-	
-		return { 
-			props: { 
-				repo 
-			}
+export async function getServerSideProps(context) {
+	const res = await fetch('https://api.github.com/repos/vercerl/next.js')
+	const data = await res.json()
+
+	if (!data) {
+		return {
+			notFound: true
 		}
 	}
-	
+
+	return { 
+		props: { 
+			repo 
+		}
+	}
+}
 ```
 
-</details>
+</details
